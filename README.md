@@ -1,5 +1,11 @@
 # vue-calculator
 
+Make sure you have the yarn package manager installed https://yarnpkg.com/en/docs/install
+
+or 
+
+remove `yarn.lock` and install via `npm i` but that will remove the locked files that are tested with
+
 ## Project setup
 ```
 yarn install
