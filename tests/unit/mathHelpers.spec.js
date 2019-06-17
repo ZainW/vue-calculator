@@ -26,6 +26,11 @@ describe('mathHerlpers Utils', () => {
     expect(mathHelpers.percentage(50)).toBe(0.5);
   });
 
+  it('converts string to float', () => {
+    expect(mathHelpers.toNum('1')).toBe(1);
+    expect(mathHelpers.toNum('3.3')).toBe(3.3);
+  });
+
   it('removes leading zeroes from a string representing a number', () => {
     expect(mathHelpers.removeLeadingZeroes('0000100')).toBe('100');
     expect(mathHelpers.removeLeadingZeroes('0005043')).toBe('5043');
