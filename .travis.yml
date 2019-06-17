@@ -14,5 +14,5 @@ cache:
     - 'node_modules'
 
 script:
-  - yarn lint
+  - yarn lint --no-fix
   - yarn test:unit
