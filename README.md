@@ -10,6 +10,14 @@ You can just run `npm i` with the yarn.lock but then the locked files from yarn 
 
 replace all `yarn run` commands with `npm run` if using npm
 
+## Notes:
+Works properly if used properly (edge cases are not fully working at the moment)
+
+some known reproducible bugs:
+- repeated presses of certain button combinations create NaN `2x/9=` for example tried a few things but it broke other functionality, would have to revisit that
+- float based calculations ie `2.2x2.2` produces `4.840000000000001` this is a javascript thing as far as I know and would likely swap out math helpers with something like mathjs, while overkill it would actually provide proper execution of math stuff. did not want to round as there are different rounding rules and for the purpose of this showcase it seemed like overkill to have dynamic rounding
+
+
 ## Project setup
 ```
 yarn install

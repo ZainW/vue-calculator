@@ -10,6 +10,7 @@ describe('HelloWorld.vue', () => {
     const wrapper = shallowMount(Calculator);
 
     // expression is the key, where each char is a character pertaining
+    // I find this easier to write/understand as opposed to just writing the array of arrays that object.entries provides
     const evalStrings = { '3X3-7=': '2', '3X3-10=': '-1', '3X3-10+2=': '1' };
 
     // easier to iterate over array over pairs
