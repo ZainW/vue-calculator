@@ -1,10 +1,14 @@
 # vue-calculator
 
+[![Build Status](https://travis-ci.org/ZainW/vue-calculator.svg?branch=master)](https://travis-ci.org/ZainW/vue-calculator)
+
 Make sure you have the yarn package manager installed https://yarnpkg.com/en/docs/install
 
 or 
 
-remove `yarn.lock` and install via `npm i` but that will remove the locked files that are tested with
+You can just run `npm i` with the yarn.lock but then the locked files from yarn will not necessarly be respected. this has been tested with `yarn` and it's comitted `yarn.lock` file
+
+replace all `yarn run` commands with `npm run` if using npm
 
 ## Project setup
 ```
