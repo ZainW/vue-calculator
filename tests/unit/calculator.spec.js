@@ -1,13 +1,16 @@
-import { shallowMount } from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 import Calculator from '@/components/Calculator.vue';
+
+// Notes: was rewarded for writing unit tests in this style, it allowed me to refactor my buttonClick logic and be confident about my changes as I worked on it
+// clean, functional unit tests are an asset to a developer using TDD or not regardless
 describe('HelloWorld.vue', () => {
   it('mounts successfully ', () => {
-    const wrapper = shallowMount(Calculator);
+    const wrapper = mount(Calculator);
     expect(wrapper.isVueInstance()).toBe(true);
   });
 
   it('calculates properly', () => {
-    const wrapper = shallowMount(Calculator);
+    const wrapper = mount(Calculator);
 
     // expression is the key, where each char is a character pertaining
     // I find this easier to write/understand as opposed to just writing the array of arrays that object.entries provides

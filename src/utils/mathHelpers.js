@@ -9,8 +9,11 @@ function subtract(param1, param2) {
   return param1 - param2;
 }
 
+// add the toFixed due to how js handles decimals which you can read more about it here https://javascript.info/number#imprecise-calculations
+// chose 8 as a number just because
+// use toNum to remove trailing zeroes from toFixed
 function multiply(param1, param2) {
-  return param1 * param2;
+  return toNum((param1 * param2).toFixed(8));
 }
 
 function divide(param1, param2) {
