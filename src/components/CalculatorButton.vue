@@ -2,9 +2,10 @@
   <!-- could also make this a functional component but functional SFC's (will still exist in render funcitons) are are being removed in Vue 3 so let's call this Vue 3 ready -->
   <!-- would rather use some sort of css in js instead of the style bind and the way classes are done now, but that is overkill for this current easier to understand example -->
   <!-- could have put the value being emitted here on click, I don't really know if there is a difference design wise -->
+  <!-- wanted to show off both class and style binding as they both can be sueful in scenarios, i understand people dont like inline styles but sometimes it's easier to use -->
   <button
-    :class="`calculator-button calculator-button__${buttonType}`"
-    :style="{ 'grid-column-end': `span ${span}` }"
+    :class="classBind"
+    :style="styleBind"
     :data-qa="`calculator-button__${value}`"
     v-on="$listeners"
   >
@@ -33,6 +34,23 @@ export default {
     span: {
       type: Number,
       default: 1
+    }
+  },
+
+  computed: {
+    styleBind() {
+      return {
+        'grid-column-end': `span ${this.span}`
+      };
+    },
+
+    classBind() {
+      return {
+        'calculator-button': true,
+        'calculator-button__default': this.buttonType === 'default',
+        'calculator-button__primary': this.buttonType === 'primary',
+        'calculator-button__secondary': this.buttonType === 'secondary'
+      };
     }
   }
 };
