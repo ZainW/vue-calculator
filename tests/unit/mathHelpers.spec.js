@@ -1,3 +1,5 @@
+// importing all as mathHelpers just to be more clear in the tests, could also so a destructure import, this is ust my preference for unit tests as
+// it will scale nicer in the long run in my opinion
 import * as mathHelpers from '@/utils/mathHelpers';
 
 describe('mathHerlpers Utils', () => {
@@ -14,6 +16,11 @@ describe('mathHerlpers Utils', () => {
   it('multiplies two numbers together', () => {
     expect(mathHelpers.multiply(1, 2)).toBe(2);
     expect(mathHelpers.multiply(2, 2)).toBe(4);
+  });
+
+  // see https://javascript.info/number#imprecise-calculations for more details about multiplying decimals
+  it('multiplies 2 decimals more accuratly', () => {
+    expect(mathHelpers.multiply(2.2, 2.2)).toBe(4.84);
   });
 
   it('divides the first number  by the second number (param1 / param2) ', () => {
