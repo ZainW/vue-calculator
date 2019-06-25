@@ -84,7 +84,6 @@ export default {
       this.previousValue = null;
       this.operation = null;
       this.currentValue = '';
-      this.lastClickOperator = false;
     },
 
     operationSet(operation) {
